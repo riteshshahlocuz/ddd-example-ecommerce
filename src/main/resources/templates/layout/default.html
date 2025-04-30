@@ -10,7 +10,7 @@
     <header id="header" layout:fragment="header">
         <nav th:if="${categories}" class="categories">
             <a th:href="@{/}" class="home">&#127968;</a>
-            <a th:each="category: ${categories}" th:href="'/category/' + ${category.uri}" th:text="${category.title}"></a>
+            <a th:each="category: ${categories}" th:href="@{/}+'category/' + ${category.uri}" th:text="${category.title}"></a>
             <a th:href="@{/cart}" class="cart">&#x1F6D2;</a>
         </nav>
     </header>
